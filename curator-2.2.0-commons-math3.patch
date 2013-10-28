@@ -1,0 +1,52 @@
+diff -Nru apache-curator-2.2.0-incubating/curator-recipes/src/test/java/org/apache/curator/framework/recipes/atomic/TestDistributedAtomicLong.java apache-curator-2.2.0-incubating-gil/curator-recipes/src/test/java/org/apache/curator/framework/recipes/atomic/TestDistributedAtomicLong.java
+--- apache-curator-2.2.0-incubating/curator-recipes/src/test/java/org/apache/curator/framework/recipes/atomic/TestDistributedAtomicLong.java	2013-07-04 18:09:10.000000000 +0200
++++ apache-curator-2.2.0-incubating-gil/curator-recipes/src/test/java/org/apache/curator/framework/recipes/atomic/TestDistributedAtomicLong.java	2013-10-11 01:37:05.486241243 +0200
+@@ -24,8 +24,8 @@
+ import org.apache.curator.framework.recipes.BaseClassForTests;
+ import org.apache.curator.retry.ExponentialBackoffRetry;
+ import org.apache.curator.retry.RetryOneTime;
+-import org.apache.commons.math.stat.descriptive.SummaryStatistics;
+-import org.apache.commons.math.stat.descriptive.SynchronizedSummaryStatistics;
++import org.apache.commons.math3.stat.descriptive.SummaryStatistics;
++import org.apache.commons.math3.stat.descriptive.SynchronizedSummaryStatistics;
+ import org.testng.Assert;
+ import org.testng.annotations.Test;
+ import org.testng.collections.Lists;
+diff -Nru apache-curator-2.2.0-incubating/curator-recipes/src/test/java/org/apache/curator/framework/recipes/queue/TestQueueSharder.java apache-curator-2.2.0-incubating-gil/curator-recipes/src/test/java/org/apache/curator/framework/recipes/queue/TestQueueSharder.java
+--- apache-curator-2.2.0-incubating/curator-recipes/src/test/java/org/apache/curator/framework/recipes/queue/TestQueueSharder.java	2013-06-29 19:58:12.000000000 +0200
++++ apache-curator-2.2.0-incubating-gil/curator-recipes/src/test/java/org/apache/curator/framework/recipes/queue/TestQueueSharder.java	2013-10-11 01:37:05.487241183 +0200
+@@ -28,7 +28,7 @@
+ import org.apache.curator.retry.RetryOneTime;
+ import org.apache.curator.test.Timing;
+ import junit.framework.Assert;
+-import org.apache.commons.math.stat.descriptive.SummaryStatistics;
++import org.apache.commons.math3.stat.descriptive.SummaryStatistics;
+ import org.testng.annotations.Test;
+ import java.util.Set;
+ import java.util.concurrent.CountDownLatch;
+diff -Nru apache-curator-2.2.0-incubating/curator-test/pom.xml apache-curator-2.2.0-incubating-gil/curator-test/pom.xml
+--- apache-curator-2.2.0-incubating/curator-test/pom.xml	2013-07-31 19:12:34.000000000 +0200
++++ apache-curator-2.2.0-incubating-gil/curator-test/pom.xml	2013-10-11 01:38:07.609478250 +0200
+@@ -44,8 +44,8 @@
+ 
+         <dependency>
+             <groupId>org.apache.commons</groupId>
+-            <artifactId>commons-math</artifactId>
+-            <version>2.2</version>
++            <artifactId>commons-math3</artifactId>
++            <version>3.2</version>
+         </dependency>
+     </dependencies>
+ </project>
+diff -Nru apache-curator-2.2.0-incubating/curator-x-discovery/src/test/java/org/apache/curator/x/discovery/TestStrategies.java apache-curator-2.2.0-incubating-gil/curator-x-discovery/src/test/java/org/apache/curator/x/discovery/TestStrategies.java
+--- apache-curator-2.2.0-incubating/curator-x-discovery/src/test/java/org/apache/curator/x/discovery/TestStrategies.java	2013-06-29 19:58:12.000000000 +0200
++++ apache-curator-2.2.0-incubating-gil/curator-x-discovery/src/test/java/org/apache/curator/x/discovery/TestStrategies.java	2013-10-11 01:37:05.488241122 +0200
+@@ -23,7 +23,7 @@
+ import org.apache.curator.x.discovery.strategies.RandomStrategy;
+ import org.apache.curator.x.discovery.strategies.RoundRobinStrategy;
+ import org.apache.curator.x.discovery.strategies.StickyStrategy;
+-import org.apache.commons.math.stat.descriptive.SummaryStatistics;
++import org.apache.commons.math3.stat.descriptive.SummaryStatistics;
+ import org.testng.Assert;
+ import org.testng.annotations.Test;
+ import java.util.List;
